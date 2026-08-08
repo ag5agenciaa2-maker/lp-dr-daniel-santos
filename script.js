@@ -180,13 +180,13 @@
 })();
 
 /* ──────────────────────────────────────────────
-   WHATSAPP PREMIUM — Balão flutuante (AG5 V4)
+   WHATSAPP PREMIUM (Balão flutuante, AG5 V4)
 
    Timeline:
      • t=0s  → usuário chega na 3ª seção (#servicos) → botão verde aparece imediatamente
      • t=25s → balão sobe ("digitando..." por 2.5s → mensagem real)
      • t=40s → balão some automaticamente (visível por 15s)
-     • t=45s → badge vermelho "1" apareceria (só nicho tranquilo) — advocacia é Compliance, badge não ativa
+     • t=45s → badge vermelho "1" apareceria (só nicho tranquilo); advocacia é Compliance, badge não ativa
 
    Se o usuário fechar manualmente: nada mais acontece (Compliance).
    Se o usuário clicar no botão WhatsApp: tudo é limpo, abre wa.me.

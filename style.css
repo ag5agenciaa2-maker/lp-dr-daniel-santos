@@ -407,7 +407,8 @@ a.footer-contact__item:hover{color:var(--gold)}
 @media (max-width:768px){
   :root{--pad-x:20px;--pad-y:64px}
   .profile{grid-template-columns:1fr;min-height:0;display:flex;flex-direction:column}
-  .profile__pic{height:280px;order:2}
+  .profile__pic{height:280px;order:2;margin:0 22px;border:1px solid rgba(176,141,87,.3)}
+  .profile__pic img{transform:scale(1.22);object-position:65% 42%}
   .profile__content{display:contents}
   .profile .eyebrow{order:1;padding:44px 22px 0}
   .profile__quote{order:1;margin:0;padding:0 22px 24px}
@@ -466,7 +467,7 @@ a.footer-contact__item:hover{color:var(--gold)}
 }
 
 /* ═══════════════════════════════════════════════════════
-   WHATSAPP PREMIUM — Balão + botão flutuante (AG5 V4)
+   WHATSAPP PREMIUM (Balão + botão flutuante, AG5 V4)
 ═══════════════════════════════════════════════════════ */
 .wa-premium-container{position:fixed;bottom:25px;right:20px;z-index:2000;font-family:var(--sans)}
 
@@ -501,7 +502,7 @@ a.footer-contact__item:hover{color:var(--gold)}
 .wa-float-btn:hover{transform:scale(1.1) translateY(-3px)}
 .wa-float-btn svg{display:block}
 
-/* Badge de notificação (compacto — não invasivo; oculto em modo Compliance via JS) */
+/* Badge de notificação (compacto, não invasivo; oculto em modo Compliance via JS) */
 .wa-badge{position:absolute;top:-1px;right:-1px;background:#ff3b30;color:#fff;font-size:9px;line-height:1;width:15px;height:15px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;border:1.5px solid #fff;opacity:0;transform:scale(0);transition:all .4s ease}
 .wa-badge.show{opacity:1;transform:scale(1)}
 
@@ -509,7 +510,7 @@ a.footer-contact__item:hover{color:var(--gold)}
 .wa-close{position:absolute;top:10px;right:10px;background:none;border:none;color:#999;cursor:pointer;padding:5px;transition:color .3s;display:flex;align-items:center;justify-content:center}
 .wa-close:hover{color:#666}
 
-/* Classes utilitárias (PageSpeed fix — evita inline style/forced reflow) */
+/* Classes utilitárias (PageSpeed fix, evita inline style/forced reflow) */
 .wa-typing.is-hidden{display:none!important}
 .wa-message-text.is-visible{display:block!important;opacity:0;transition:opacity 500ms ease}
 .wa-message-text.is-visible.is-in{opacity:1}
