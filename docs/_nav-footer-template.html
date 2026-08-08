@@ -1,0 +1,272 @@
+<!--
+  TEMPLATE CANÔNICO — Nav + Footer + Drawer + Cookie LGPD + WhatsApp + Scripts
+  Fonte: index.html (Daniel Santos da Silva — Sociedade de Advocacia)
+  Última sincronização: gerado pela Skill "Rodapé Padrão nas Páginas"
+
+  Como usar:
+  - {{BASE}} = "" (vazio) se a página está na RAIZ do projeto (mesmo nível de index.html)
+  - {{BASE}} = "../" se a página está em SUBPASTA (ex: blog/post.html)
+  - Nunca copie de uma página secundária — sempre a partir DESTE arquivo ou do index.html atual.
+  - Se o nav/footer do index.html mudar, regenere este arquivo e re-rode a skill nas páginas.
+-->
+
+<!-- ========== NAV ========== -->
+<header class="nav">
+  <div class="nav__inner">
+    <a class="brand" href="{{BASE}}index.html">
+      <span class="brand__mark"><img src="{{BASE}}assets/logo-desktop-dr-daniel-santos.webp" alt="DSS &amp; Sociedade de Advocacia"></span>
+      <span class="brand__text">
+        <span class="brand__name">Daniel Santos da Silva</span>
+        <span class="brand__sub">Sociedade de Advocacia</span>
+      </span>
+    </a>
+    <nav class="nav__pill">
+      <a href="{{BASE}}index.html#topo">Início</a>
+      <a href="{{BASE}}index.html#servicos">Serviços</a>
+      <a href="{{BASE}}index.html#grade-mentoria">Mentoria</a>
+      <a href="{{BASE}}index.html#sobre">Sobre</a>
+      <a href="{{BASE}}index.html#contato">Contato</a>
+    </nav>
+    <a class="btn btn--gold-flat nav__cta" href="https://wa.me/5521971683299?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener"><span>Quero saber mais</span></a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <span class="brand__mark brand__mark--lg"><img src="{{BASE}}assets/logo-desktop-dr-daniel-santos.webp" alt="DSS &amp; Sociedade de Advocacia"></span>
+      <p>Sociedade Individual de Advocacia<br>Crimes financeiros · Fraudes bancárias · Direito digital</p>
+    </div>
+    <div class="footer-list">
+      <p class="footer__label">Navegação</p>
+      <a href="{{BASE}}index.html#topo">Início</a>
+      <a href="{{BASE}}index.html#servicos">Serviços</a>
+      <a href="{{BASE}}index.html#grade-mentoria">Mentoria</a>
+      <a href="{{BASE}}index.html#sobre">Sobre</a>
+      <a href="{{BASE}}index.html#contato">Contato</a>
+    </div>
+    <div class="footer-list">
+      <p class="footer__label">Serviços</p>
+      <a href="{{BASE}}index.html#servicos">Crimes financeiros</a>
+      <a href="{{BASE}}index.html#servicos">Mentoria para advogados</a>
+      <a href="{{BASE}}index.html#servicos">Marketing Jurídico</a>
+      <a href="{{BASE}}index.html#servicos">Professor e palestrante</a>
+    </div>
+    <div class="footer-contact">
+      <p class="footer__label">Contato</p>
+      <span class="footer-contact__item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M6 21V7l6-4 6 4v14M10 21v-6h4v6M9 9h.01M15 9h.01M9 13h.01M15 13h.01"/></svg>
+        <span>Daniel Santos da Silva — Sociedade de Advocacia</span>
+      </span>
+      <a class="footer-contact__item" href="https://wa.me/5521971683299?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20jur%C3%ADdica." target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.3A8.7 8.7 0 0 0 12 4a8.8 8.8 0 0 0-7.6 13.2L3 21l3.9-1.3A8.8 8.8 0 0 0 12 20.7 8.7 8.7 0 0 0 20.7 12a8.7 8.7 0 0 0-3.1-5.7Zm-5.6 13a7.3 7.3 0 0 1-3.7-1l-.3-.2-2.2.7.7-2.1-.2-.3a7.3 7.3 0 1 1 5.7 2.9Zm4-5.5c-.2-.1-1.3-.6-1.5-.7-.2-.1-.3-.1-.5.1l-.7.8c-.1.2-.3.2-.5.1a6 6 0 0 1-1.8-1.1 6.6 6.6 0 0 1-1.2-1.5c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4l-.7-1.6c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2 1 2.4c.1.1 1.7 2.6 4.1 3.6.6.2 1 .4 1.4.5.6.2 1.1.1 1.5.1.5-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1l-.4-.2Z"/></svg>
+        <span>21 97168-3299</span>
+      </a>
+    </div>
+  </div>
+  <div class="wrap footer__credits">
+    <div class="footer-credits-left">
+      <span class="footer__copyright">© Daniel Santos da Silva 2026</span>
+      <div class="footer-legal-links">
+        <a href="#" id="ck-prefs-link" class="footer__cookie">
+          <span id="cookie-toggle" class="footer__cookie-toggle active" aria-hidden="true">
+            <span class="footer__cookie-check">✓</span>
+            <span class="footer__cookie-cross">✕</span>
+            <span id="cookie-toggle-dot" class="footer__cookie-dot"></span>
+          </span>
+          Cookies
+        </a>
+        <span class="footer-legal-sep" aria-hidden="true">|</span>
+        <a href="{{BASE}}termos-e-condicoes.html">Termos e Condições</a>
+        <span class="footer-legal-sep" aria-hidden="true">|</span>
+        <a href="{{BASE}}politica-de-privacidade.html">Política de Privacidade</a>
+      </div>
+    </div>
+    <div class="footer-credits-right">Desenvolvido por <a href="https://www.ag5agencia.com.br" target="_blank" rel="noopener">AG5</a> Agência</div>
+  </div>
+</footer>
+
+<!-- ========== MOBILE DRAWER ========== -->
+<div class="drawer-overlay" id="drawer-overlay" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer__head">
+    <span class="brand__mark"><img src="{{BASE}}assets/logo-desktop-dr-daniel-santos.webp" alt="DSS &amp; Sociedade de Advocacia"></span>
+    <button class="drawer__close" type="button" aria-label="Fechar menu">&times;</button>
+  </div>
+  <nav class="drawer__menu">
+    <a href="{{BASE}}index.html#topo">Início</a>
+    <a href="{{BASE}}index.html#servicos">Serviços</a>
+    <a href="{{BASE}}index.html#grade-mentoria">Mentoria</a>
+    <a href="{{BASE}}index.html#sobre">Sobre</a>
+    <a href="{{BASE}}index.html#contato">Contato</a>
+    <a class="btn btn--gold drawer__cta" href="https://wa.me/5521971683299?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener">Quero saber mais</a>
+  </nav>
+</aside>
+
+<!-- ========== COOKIE LGPD — BANNER ========== -->
+<div id="ck-banner" class="ck-banner" role="dialog" aria-modal="true" aria-label="Aviso de cookies" aria-live="polite" aria-hidden="true">
+  <div class="ck-banner__inner">
+    <div class="ck-banner__content">
+      <h2 class="ck-banner__title">Valorizamos sua privacidade</h2>
+      <p class="ck-banner__text">
+        Utilizamos cookies para aprimorar sua experiência de navegação, exibir conteúdo
+        personalizado e analisar nosso tráfego. Ao clicar em <strong>"Aceitar todos"</strong>,
+        você concorda com nosso uso de cookies conforme nossa
+        <a href="{{BASE}}politica-de-privacidade.html" class="ck-banner__link">Política de Privacidade</a>.
+      </p>
+    </div>
+    <div class="ck-banner__actions">
+      <button id="ck-customize" class="ck-btn ck-btn--ghost">Personalizar</button>
+      <button id="ck-reject" class="ck-btn ck-btn--outline">Rejeitar</button>
+      <button id="ck-accept-all" class="ck-btn ck-btn--primary">Aceitar todos</button>
+    </div>
+  </div>
+</div>
+
+<!-- ========== COOKIE LGPD — MODAL DE PERSONALIZAÇÃO ========== -->
+<div id="ck-modal" class="ck-modal" role="dialog" aria-modal="true" aria-label="Personalizar preferências de cookies" aria-hidden="true">
+  <div class="ck-modal__overlay" id="ck-modal-overlay"></div>
+  <div class="ck-modal__box">
+
+    <div class="ck-modal__header">
+      <h2 class="ck-modal__title">Personalizar preferências de consentimento</h2>
+      <button class="ck-modal__close" id="ck-modal-close" aria-label="Fechar modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="ck-modal__body">
+      <p class="ck-modal__intro">
+        Utilizamos cookies para ajudar você a navegar com eficiência e executar certas funções.
+        Os cookies classificados como <strong>"Necessário"</strong> são essenciais para o
+        funcionamento básico do site e não podem ser desativados.
+      </p>
+
+      <div class="ck-category">
+        <div class="ck-category__header">
+          <div class="ck-category__info">
+            <h3 class="ck-category__name">Necessário</h3>
+            <p class="ck-category__desc">Essenciais para o funcionamento do site. Não armazenam dados pessoalmente identificáveis.</p>
+          </div>
+          <span class="ck-category__badge">Sempre ativo</span>
+        </div>
+      </div>
+
+      <div class="ck-category">
+        <div class="ck-category__header">
+          <div class="ck-category__info">
+            <h3 class="ck-category__name">Funcional</h3>
+            <p class="ck-category__desc">Ajudam a executar funcionalidades como compartilhamento em mídia social e recursos de terceiros.</p>
+          </div>
+          <label class="ck-toggle" aria-label="Ativar cookies funcionais">
+            <input type="checkbox" id="ck-functional" name="functional">
+            <span class="ck-toggle__slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="ck-category">
+        <div class="ck-category__header">
+          <div class="ck-category__info">
+            <h3 class="ck-category__name">Analítico</h3>
+            <p class="ck-category__desc">Usados para entender como os visitantes interagem com o site (visitantes, taxa de rejeição, etc.).</p>
+          </div>
+          <label class="ck-toggle" aria-label="Ativar cookies analíticos">
+            <input type="checkbox" id="ck-analytics" name="analytics">
+            <span class="ck-toggle__slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="ck-category">
+        <div class="ck-category__header">
+          <div class="ck-category__info">
+            <h3 class="ck-category__name">Desempenho</h3>
+            <p class="ck-category__desc">Analisam índices de desempenho do site para oferecer melhor experiência ao visitante.</p>
+          </div>
+          <label class="ck-toggle" aria-label="Ativar cookies de desempenho">
+            <input type="checkbox" id="ck-performance" name="performance">
+            <span class="ck-toggle__slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="ck-category">
+        <div class="ck-category__header">
+          <div class="ck-category__info">
+            <h3 class="ck-category__name">Publicidade</h3>
+            <p class="ck-category__desc">Entregam anúncios personalizados com base nas páginas visitadas anteriormente.</p>
+          </div>
+          <label class="ck-toggle" aria-label="Ativar cookies de publicidade">
+            <input type="checkbox" id="ck-advertising" name="advertising">
+            <span class="ck-toggle__slider"></span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ck-modal__footer">
+      <button id="ck-modal-reject" class="ck-btn ck-btn--outline">Rejeitar</button>
+      <button id="ck-modal-save" class="ck-btn ck-btn--ghost">Salvar Preferências</button>
+      <button id="ck-modal-accept-all" class="ck-btn ck-btn--primary">Aceitar todos</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========== MODAL DE DÚVIDAS (só existe/funciona na home, mas o modal em si é inofensivo se vazio) ========== -->
+<div class="obj-modal" id="obj-modal" aria-hidden="true">
+  <div class="obj-modal__overlay" id="obj-modal-overlay"></div>
+  <div class="obj-modal__box" role="dialog" aria-modal="true" aria-labelledby="obj-modal-q">
+    <button class="obj-modal__close" id="obj-modal-close" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <span class="obj-modal__mark" aria-hidden="true">?</span>
+    <p class="obj-modal__q" id="obj-modal-q"></p>
+    <span class="obj-modal__lbl">Resposta direta</span>
+    <p class="obj-modal__a" id="obj-modal-a"></p>
+  </div>
+</div>
+
+<!-- ========== WHATSAPP FLUTUANTE (Premium Experience) ========== -->
+<div class="wa-premium-container">
+  <div id="wa-message-bubble" class="wa-bubble">
+    <button class="wa-close" id="wa-close-btn" aria-label="Fechar balão de mensagem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="14" height="14" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="wa-content">
+      <div class="wa-header">
+        <div class="wa-avatar-wrapper">
+          <img src="{{BASE}}assets/daniel-santos-advogado-retrato-perfil-estudio.webp" alt="Dr. Daniel Santos" class="wa-avatar" width="48" height="48">
+        </div>
+        <div class="wa-info">
+          <span class="wa-name">Dr. Daniel Santos</span>
+        </div>
+      </div>
+      <div id="wa-typing" class="wa-typing">
+        <span></span><span></span><span></span>
+      </div>
+      <div id="wa-real-message" class="wa-message-text" style="display:none;">
+        <p>Olá! Estamos à disposição para esclarecer suas dúvidas. <strong>Atendimento humanizado.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/5521971683299?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20jur%C3%ADdica."
+     class="wa-float-btn" target="_blank" rel="noopener noreferrer"
+     id="wa-main-btn" aria-label="Fale conosco pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="30" height="30">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="wa-badge" id="wa-notification" aria-hidden="true">1</span>
+  </a>
+</div>
+
+<!-- ========== SCRIPTS (ordem obrigatória) ========== -->
+<script src="{{BASE}}script.js"></script>
+<script src="{{BASE}}cookie-banner.js" defer></script>
