@@ -22,12 +22,23 @@
 <meta name="twitter:title" content="Advogado Crimes Financeiros Campo Grande RJ | Daniel Santos da Silva">
 <meta name="twitter:description" content="Advocacia especializada em crimes financeiros e fraudes bancárias em Campo Grande, Rio de Janeiro. Mestre e doutorando em Direito.">
 <meta name="twitter:image" content="https://www.danielsantosdasilva.ag5agencia.site/assets/daniel-santos-advogado-retrato-mesa-escritorio.webp">
+<!-- PageSpeed fix: preload da imagem LCP (retrato do Hero) -->
+<link rel="preload" href="assets/daniel-santos-advogado-retrato-mesa-escritorio.webp" as="image" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- PageSpeed fix: Google Fonts carregado de forma assíncrona (elimina render-blocking) -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 <link rel="icon" href="assets/favicon-dr-daniel-santos.ico">
+<link rel="preload" href="style.css" as="style">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="cookie-banner.css">
+<!-- PageSpeed fix: cookie-banner.css não é crítico para o primeiro render, carrega async -->
+<link rel="preload" href="cookie-banner.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="cookie-banner.css"></noscript>
+<style>
+  /* PageSpeed fix: fallback de fonte para o H1 (elemento LCP) renderizar antes da fonte externa chegar */
+  .hero__title{font-family:Georgia,'Times New Roman',serif}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -227,14 +238,14 @@
         <span class="brand__sub">Sociedade de Advocacia</span>
       </span>
     </a>
-    <nav class="nav__pill">
+    <nav class="nav__pill" aria-label="Navegação principal">
       <a href="#topo">Início</a>
       <a href="#servicos">Serviços</a>
       <a href="#grade-mentoria">Mentoria</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </nav>
-    <a class="btn btn--gold-flat nav__cta" href="https://wa.me/5521971683299?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener"><span>Quero saber mais</span></a>
+    <a class="btn btn--gold-flat nav__cta" href="https://wa.me/5521971683299?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener noreferrer" aria-label="Quero saber mais – falar pelo WhatsApp"><span>Quero saber mais</span></a>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Abrir menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -490,7 +501,7 @@
       <span class="depo__go" aria-hidden="true">Ver resposta<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </button>
   </div>
-  <p class="wrap depo__more" data-reveal>Não encontrou sua dúvida? Chame no WhatsApp: <a href="https://wa.me/5521971683299?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20meu%20caso." target="_blank" rel="noopener">21 97168-3299</a>.</p>
+  <p class="wrap depo__more" data-reveal>Não encontrou sua dúvida? Chame no WhatsApp: <a href="https://wa.me/5521971683299?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20meu%20caso." target="_blank" rel="noopener noreferrer">21 97168-3299</a>.</p>
 </section>
 
 <section class="section section--dark ctt" id="contato">
@@ -585,7 +596,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M6 21V7l6-4 6 4v14M10 21v-6h4v6M9 9h.01M15 9h.01M9 13h.01M15 13h.01"/></svg>
         <span>Daniel Santos da Silva, Sociedade de Advocacia</span>
       </span>
-      <a class="footer-contact__item" href="https://wa.me/5521971683299?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20jur%C3%ADdica." target="_blank" rel="noopener">
+      <a class="footer-contact__item" href="https://wa.me/5521971683299?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20jur%C3%ADdica." target="_blank" rel="noopener noreferrer">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.3A8.7 8.7 0 0 0 12 4a8.8 8.8 0 0 0-7.6 13.2L3 21l3.9-1.3A8.8 8.8 0 0 0 12 20.7 8.7 8.7 0 0 0 20.7 12a8.7 8.7 0 0 0-3.1-5.7Zm-5.6 13a7.3 7.3 0 0 1-3.7-1l-.3-.2-2.2.7.7-2.1-.2-.3a7.3 7.3 0 1 1 5.7 2.9Zm4-5.5c-.2-.1-1.3-.6-1.5-.7-.2-.1-.3-.1-.5.1l-.7.8c-.1.2-.3.2-.5.1a6 6 0 0 1-1.8-1.1 6.6 6.6 0 0 1-1.2-1.5c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4l-.7-1.6c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2 1 2.4c.1.1 1.7 2.6 4.1 3.6.6.2 1 .4 1.4.5.6.2 1.1.1 1.5.1.5-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1l-.4-.2Z"/></svg>
         <span>21 97168-3299</span>
       </a>
@@ -609,7 +620,7 @@
         <a href="/politica-de-privacidade">Política de Privacidade</a>
       </div>
     </div>
-    <div class="footer-credits-right">Desenvolvido por <a href="https://www.ag5agencia.com.br" target="_blank" rel="noopener">AG5</a> Agência</div>
+    <div class="footer-credits-right">Desenvolvido por <a href="https://www.ag5agencia.com.br" target="_blank" rel="noopener noreferrer">AG5</a> Agência</div>
   </div>
 </footer>
 
@@ -619,13 +630,13 @@
     <span class="brand__mark"><img src="assets/logo-desktop-dr-daniel-santos.webp" alt="DSS &amp; Sociedade de Advocacia"></span>
     <button class="drawer__close" type="button" aria-label="Fechar menu">&times;</button>
   </div>
-  <nav class="drawer__menu">
+  <nav class="drawer__menu" aria-label="Navegação mobile">
     <a href="#topo">Início</a>
     <a href="#servicos">Serviços</a>
     <a href="#grade-mentoria">Mentoria</a>
     <a href="#sobre">Sobre</a>
     <a href="#contato">Contato</a>
-    <a class="drawer__cta" href="https://wa.me/5521971683299?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener">Quero saber mais</a>
+    <a class="drawer__cta" href="https://wa.me/5521971683299?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener noreferrer" aria-label="Quero saber mais – falar pelo WhatsApp (menu mobile)">Quero saber mais</a>
   </nav>
 </aside>
 
