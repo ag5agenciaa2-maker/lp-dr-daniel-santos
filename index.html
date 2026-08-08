@@ -229,25 +229,25 @@
   </div>
   <div class="wrap dossie__grid">
     <figure class="dossie__file" data-reveal>
-      <span class="dossie__tag">Registro nº 01</span>
-      <div class="dossie__frame">
+      <div class="dossie__frame" data-lightbox data-src="assets/daniel-santos-advogado-forum-regional-meier.webp" data-caption="Presença diária em fóruns do Rio de Janeiro">
+        <span class="dossie__tag">Registro nº 01</span>
         <img src="assets/daniel-santos-advogado-forum-regional-meier.webp" alt="Advogado Daniel Santos da Silva em frente ao Fórum Regional do Méier, Rio de Janeiro" loading="lazy">
+        <figcaption>Presença diária em fóruns do Rio de Janeiro</figcaption>
       </div>
-      <figcaption>Presença diária em fóruns do Rio de Janeiro</figcaption>
     </figure>
     <figure class="dossie__file" data-reveal>
-      <span class="dossie__tag">Registro nº 02</span>
-      <div class="dossie__frame">
+      <div class="dossie__frame" data-lightbox data-src="assets/daniel-santos-advogado-23-delegacia-policial.webp" data-caption="Atuação diária em delegacias do Rio e Baixada">
+        <span class="dossie__tag">Registro nº 02</span>
         <img class="pos-low" src="assets/daniel-santos-advogado-23-delegacia-policial.webp" alt="Advogado Daniel Santos da Silva na 23ª Delegacia Policial, Rio de Janeiro" loading="lazy">
+        <figcaption>Atuação diária em delegacias do Rio e Baixada</figcaption>
       </div>
-      <figcaption>Atuação diária em delegacias do Rio e Baixada</figcaption>
     </figure>
     <figure class="dossie__file" data-reveal>
-      <span class="dossie__tag">Registro nº 03</span>
-      <div class="dossie__frame">
+      <div class="dossie__frame" data-lightbox data-src="assets/daniel-santos-advogado-entrevista-equipe-jornalismo.webp" data-caption="Casos de repercussão na imprensa">
+        <span class="dossie__tag">Registro nº 03</span>
         <img src="assets/daniel-santos-advogado-entrevista-equipe-jornalismo.webp" alt="Advogado Daniel Santos da Silva concedendo entrevista à imprensa sobre caso de repercussão" loading="lazy">
+        <figcaption>Casos de repercussão na imprensa</figcaption>
       </div>
-      <figcaption>Casos de repercussão na imprensa</figcaption>
     </figure>
   </div>
 </section>
@@ -421,7 +421,7 @@
     <a href="#grade-mentoria">Mentoria</a>
     <a href="#sobre">Sobre</a>
     <a href="#contato">Contato</a>
-    <a class="btn btn--gold drawer__cta" href="https://wa.me/5521971683299?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener">Quero saber mais</a>
+    <a class="drawer__cta" href="https://wa.me/5521971683299?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener">Quero saber mais</a>
   </nav>
 </aside>
 
@@ -536,6 +536,18 @@
       <button id="ck-modal-accept-all" class="ck-btn ck-btn--primary">Aceitar todos</button>
     </div>
 
+  </div>
+</div>
+
+<!-- Lightbox de Registros (somente mobile) -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox__overlay" id="lightbox-overlay"></div>
+  <div class="lightbox__box" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="">
+    <p class="lightbox__caption" id="lightbox-caption"></p>
   </div>
 </div>
 
