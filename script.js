@@ -154,17 +154,36 @@
     };
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var nome = form.nome, tel = form.telefone, mail = form.email, msg = form.mensagem;
+      var nome = form.nome, tel = form.telefone, mail = form.email, assunto = form.assunto, msg = form.mensagem;
       var digits = tel.value.replace(/\D/g, '');
-      var emailOk = !mail.value.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail.value.trim());
+      var emailVal = mail.value.trim();
+      var emailOk = !emailVal || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(emailVal);
       [nome, tel, mail, msg].forEach(function (f) { mark(f, false); });
 
       if (nome.value.trim().length < 3) { mark(nome, true); nome.focus(); return setStatus('Informe seu nome completo.'); }
       if (digits.length < 10) { mark(tel, true); tel.focus(); return setStatus('Informe um WhatsApp com DDD.'); }
       if (!emailOk) { mark(mail, true); mail.focus(); return setStatus('O e-mail informado parece inválido.'); }
-      if (msg.value.trim().length < 15) { mark(msg, true); msg.focus(); return setStatus('Descreva o caso em pelo menos uma frase.'); }
 
-      setStatus('Mensagem registrada. Retornaremos pelo WhatsApp no mesmo dia útil.', true);
+      var nomeVal = nome.value.trim();
+      var telVal = tel.value.trim();
+      var tipoCasoVal = assunto.value;
+      var msgVal = msg.value.trim();
+
+      // ▼ MENSAGEM OBRIGATÓRIA — estrutura fixa AG5 ▼
+      var texto = 'Olá, me chamo ' + nomeVal + ', vim através do site e gostaria de uma informação.\n\n';
+      texto += '- E-mail: ' + (emailVal || 'Não informado') + '\n';
+      texto += '- Telefone: ' + telVal + '\n';
+      texto += '- Tipo de Caso: ' + tipoCasoVal;
+      if (msgVal) {
+        texto += '\n- Descrição do caso: ' + msgVal;
+      }
+      // ▲ ────────────────────────────────────────── ▲
+
+      var numWpp = '5521971683299';
+      var urlWhatsApp = 'https://wa.me/' + numWpp + '?text=' + encodeURIComponent(texto);
+
+      window.open(urlWhatsApp, '_blank', 'noopener,noreferrer');
+      setStatus('Redirecionando para o WhatsApp...', true);
       form.reset();
     });
 
